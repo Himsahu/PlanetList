@@ -1,0 +1,23 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Planet Listing</a>
+  </div>
+  <div class="button">
+    <button type="button" class="btn btn-light" routerLink="/favorite"> Favorite </button>
+  </div>
+</nav>
+
+<br>
+<div class="container">
+  <h2>List of all the Planets</h2>
+  <div class="row"> 
+    <ul class="list-group">
+      <div></div>
+      <li class="list-group-item" *ngFor="let item of data">
+        {{item.name}}
+        <button class="btn btn-primary" (click)="addFav(item)">Add to Favorite </button>
+      </li>
+    </ul>
+  </div>
+</div>
